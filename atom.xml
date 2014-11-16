@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Carrie Xu]]></title>
+  <link href="http://carriexu.github.io/atom.xml" rel="self"/>
+  <link href="http://carriexu.github.io/"/>
+  <updated>2014-11-16T00:19:06-05:00</updated>
+  <id>http://carriexu.github.io/</id>
+  <author>
+    <name><![CDATA[Carrie Xu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Hello World]]></title>
+    <link href="http://carriexu.github.io/blog/2014/11/16/hello-world/"/>
+    <updated>2014-11-16T00:15:43-05:00</updated>
+    <id>http://carriexu.github.io/blog/2014/11/16/hello-world</id>
+    <content type="html"><![CDATA[<p>Hello and welcome, I am on my way to become a web developer, this is my journey. Thank you for reading.</p>
+]]></content>
+  </entry>
+  
+</feed>
