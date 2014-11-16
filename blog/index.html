@@ -9,7 +9,7 @@
   <meta name="author" content="Carrie Xu">
 
   
-  <meta name="description" content=" Blog Archives Recent Posts Deploying Octopress Blog to Github Pages Hello World GitHub Repos Status updating... @carriexu on GitHub ">
+  <meta name="description" content="This blog is powered by Octopress. There was an issue I ran into while trying to deploy my blog to github pages, it was the following: ## Pushing &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -56,7 +56,8 @@
 </form>
   
 <ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
+  <li><a href="/">Home</a></li>
+  <li><a href="/blog/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
 </ul>
 
@@ -65,6 +66,76 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/11/16/deploying-octopress-blog-to-github-pages/">Deploying Octopress Blog to Github Pages</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2014-11-16T01:11:20-05:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>16</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>1:11 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This blog is powered by <a href="http://octopress.org/">Octopress</a>. There was an issue I ran into while trying to deploy my blog to github pages, it was the following:</p>
+
+<pre><code>## Pushing generated _deploy website
+To git@github.com:carriexu/carriexu.github.io.git
+! [rejected]        master -&gt; master (non-fast-forward)
+error: failed to push some refs to 'git@github.com:carriexu/carriexu.github.io.git'
+</code></pre>
+
+<p>Thanks to <a href="http://stackoverflow.com/questions/21356212/failed-to-deploy-to-github-pages-using-octopress">this stackoverflow post</a> I found, I learned that it was failing to deploy to github pages when I ran <code>rake deploy</code> because <code>git</code> was not able to recognize which branch to deploy.</p>
+
+<p>To resolve this issue, I had to make a little change in the <code>:push</code> task in the Rakefile. I changed this line <code>Bundler.with_clean_env { system "git pull" }</code> to <code>Bundler.with_clean_env { system "git pull origin #{deploy_branch}" }</code></p>
+
+<p>Once that is changed, I ran <code>rake deploy</code> again and it worked.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/11/16/hello-world/">Hello World</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2014-11-16T00:15:43-05:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>16</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>12:15 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><em>Hello and welcome, I am on my way to become a web developer, this is my journey.Thank you for reading.</em></p>
+</div>
+  
+  
+
+
+    </article>
   
   <div class="pagination">
     
