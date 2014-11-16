@@ -9,7 +9,7 @@
   <meta name="author" content="Carrie Xu">
 
   
-  <meta name="description" content="This blog is powered by Octopress, http://octopress.org/, an issue I ran into while trying to deploy my blog to github pages was error: failed to &hellip;">
+  <meta name="description" content="This blog is powered by Octopress, http://octopress.org/, an issue I ran into while trying to deploy my blog to github pages was ## Pushing generated &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -84,9 +84,17 @@
   </header>
 
 
-<div class="entry-content"><p>This blog is powered by Octopress, <a href="http://octopress.org/">http://octopress.org/</a>, an issue I ran into while trying to deploy my blog to github pages was <strong>error: failed to push some refs</strong>, it was failing to deploy to github pages when I ran <code>rake deploy</code> because <code>git</code> was not able to recognize which branch to deploy.</p>
+<div class="entry-content"><p>This blog is powered by Octopress, <a href="http://octopress.org/">http://octopress.org/</a>, an issue I ran into while trying to deploy my blog to github pages was</p>
 
-<p>Thanks to <a href="http://stackoverflow.com/questions/21356212/failed-to-deploy-to-github-pages-using-octopress">this stackoverflow post</a> I found, I learned that I had to make a little change in the <code>:push</code> task in the Rakefile. I changed this line <code>Bundler.with_clean_env { system "git pull" }</code> to <code>Bundler.with_clean_env { system "git pull origin #{deploy_branch}" }</code></p>
+<pre><code>## Pushing generated _deploy website
+To git@github.com:carriexu/carriexu.github.io.git
+! [rejected]        master -&gt; master (non-fast-forward)
+error: failed to push some refs to 'git@github.com:carriexu/carriexu.github.io.git'
+</code></pre>
+
+<p>Thanks to <a href="http://stackoverflow.com/questions/21356212/failed-to-deploy-to-github-pages-using-octopress">this stackoverflow post</a> I found, I learned that it was failing to deploy to github pages when I ran <code>rake deploy</code> because <code>git</code> was not able to recognize which branch to deploy.</p>
+
+<p>To resolve this issue, I had to make a little change in the <code>:push</code> task in the Rakefile. I changed this line <code>Bundler.with_clean_env { system "git pull" }</code> to <code>Bundler.with_clean_env { system "git pull origin #{deploy_branch}" }</code></p>
 
 <p>Once that is changed, run <code>rake deploy</code> again and it should work.</p>
 </div>
