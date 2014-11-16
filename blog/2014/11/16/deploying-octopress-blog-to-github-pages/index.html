@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Hello World - Carrie Xu</title>
+  <title>Deploying Octopress Blog to Github Pages - Carrie Xu</title>
   <meta name="author" content="Carrie Xu">
 
   
-  <meta name="description" content="Hello and welcome, I am on my way to become a web developer, this is my journey.Thank you for reading.
-">
+  <meta name="description" content="This blog is powered by Octopress, http://octopress.org/, an issue I ran into while trying to deploy my blog to github pages was error: failed to &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://carriexu.github.io/blog/2014/11/16/hello-world">
+  <link rel="canonical" href="http://carriexu.github.io/blog/2014/11/16/deploying-octopress-blog-to-github-pages">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Carrie Xu" type="application/atom+xml">
@@ -69,7 +68,7 @@
   
   <header>
     
-      <h1 class="entry-title">Hello World</h1>
+      <h1 class="entry-title">Deploying Octopress Blog to Github Pages</h1>
     
     
       <p class="meta">
@@ -78,14 +77,18 @@
 
 
 
-<time class='entry-date' datetime='2014-11-16T00:15:43-05:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>16</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>12:15 am</span></time>
+<time class='entry-date' datetime='2014-11-16T01:11:20-05:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>16</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>1:11 am</span></time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p><em>Hello and welcome, I am on my way to become a web developer, this is my journey.Thank you for reading.</em></p>
+<div class="entry-content"><p>This blog is powered by Octopress, <a href="http://octopress.org/">http://octopress.org/</a>, an issue I ran into while trying to deploy my blog to github pages was <strong>error: failed to push some refs</strong>, it was failing to deploy to github pages when I ran <code>rake deploy</code> because <code>git</code> was not able to recognize which branch to deploy.</p>
+
+<p>Thanks to <a href="http://stackoverflow.com/questions/21356212/failed-to-deploy-to-github-pages-using-octopress">this stackoverflow post</a> I found, I learned that I had to make a little change in the <code>:push</code> task in the Rakefile. I changed this line <code>Bundler.with_clean_env { system "git pull" }</code> to <code>Bundler.with_clean_env { system "git pull origin #{deploy_branch}" }</code></p>
+
+<p>Once that is changed, run <code>rake deploy</code> again and it should work.</p>
 </div>
 
 
@@ -101,7 +104,7 @@
 
 
 
-<time class='entry-date' datetime='2014-11-16T00:15:43-05:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>16</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>12:15 am</span></time>
+<time class='entry-date' datetime='2014-11-16T01:11:20-05:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>16</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>1:11 am</span></time>
       
 
 
@@ -109,7 +112,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://carriexu.github.io/blog/2014/11/16/hello-world/" data-via="" data-counturl="http://carriexu.github.io/blog/2014/11/16/hello-world/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://carriexu.github.io/blog/2014/11/16/deploying-octopress-blog-to-github-pages/" data-via="" data-counturl="http://carriexu.github.io/blog/2014/11/16/deploying-octopress-blog-to-github-pages/" >Tweet</a>
   
   
   
@@ -118,8 +121,8 @@
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/blog/2014/11/16/hello-world/" title="Previous Post: hello world">&laquo; hello world</a>
       
-        <a class="basic-alignment right" href="/blog/2014/11/16/deploying-octopress-blog-to-github-pages/" title="Next Post: Deploying Octopress Blog to Github Pages">Deploying Octopress Blog to Github Pages &raquo;</a>
       
     </p>
   </footer>

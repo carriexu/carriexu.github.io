@@ -4,7 +4,7 @@
   <title><![CDATA[Carrie Xu]]></title>
   <link href="http://carriexu.github.io/atom.xml" rel="self"/>
   <link href="http://carriexu.github.io/"/>
-  <updated>2014-11-16T00:19:06-05:00</updated>
+  <updated>2014-11-16T01:19:02-05:00</updated>
   <id>http://carriexu.github.io/</id>
   <author>
     <name><![CDATA[Carrie Xu]]></name>
@@ -14,11 +14,24 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Deploying Octopress Blog to Github Pages]]></title>
+    <link href="http://carriexu.github.io/blog/2014/11/16/deploying-octopress-blog-to-github-pages/"/>
+    <updated>2014-11-16T01:11:20-05:00</updated>
+    <id>http://carriexu.github.io/blog/2014/11/16/deploying-octopress-blog-to-github-pages</id>
+    <content type="html"><![CDATA[<p>This blog is powered by Octopress, <a href="http://octopress.org/">http://octopress.org/</a>, an issue I ran into while trying to deploy my blog to github pages was <strong>error: failed to push some refs</strong>, it was failing to deploy to github pages when I ran <code>rake deploy</code> because <code>git</code> was not able to recognize which branch to deploy.</p>
+
+<p>Thanks to <a href="http://stackoverflow.com/questions/21356212/failed-to-deploy-to-github-pages-using-octopress">this stackoverflow post</a> I found, I learned that I had to make a little change in the <code>:push</code> task in the Rakefile. I changed this line <code>Bundler.with_clean_env { system "git pull" }</code> to <code>Bundler.with_clean_env { system "git pull origin #{deploy_branch}" }</code></p>
+
+<p>Once that is changed, run <code>rake deploy</code> again and it should work.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Hello World]]></title>
     <link href="http://carriexu.github.io/blog/2014/11/16/hello-world/"/>
     <updated>2014-11-16T00:15:43-05:00</updated>
     <id>http://carriexu.github.io/blog/2014/11/16/hello-world</id>
-    <content type="html"><![CDATA[<p>Hello and welcome, I am on my way to become a web developer, this is my journey. Thank you for reading.</p>
+    <content type="html"><![CDATA[<p><em>Hello and welcome, I am on my way to become a web developer, this is my journey.Thank you for reading.</em></p>
 ]]></content>
   </entry>
   
