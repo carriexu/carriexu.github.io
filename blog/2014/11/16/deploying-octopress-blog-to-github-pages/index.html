@@ -96,7 +96,7 @@ error: failed to push some refs to 'git@github.com:carriexu/carriexu.github.io.g
 
 <p>To resolve this issue, I had to make a little change in the <code>:push</code> task in the Rakefile. I changed this line <code>Bundler.with_clean_env { system "git pull" }</code> to <code>Bundler.with_clean_env { system "git pull origin #{deploy_branch}" }</code></p>
 
-<p>Once that is changed, run <code>rake deploy</code> again and it should work.</p>
+<p>Once that is changed, I ran <code>rake deploy</code> again and it worked.</p>
 </div>
 
 
