@@ -4,7 +4,7 @@
   <title><![CDATA[Carrie Xu]]></title>
   <link href="http://carriexu.github.io/atom.xml" rel="self"/>
   <link href="http://carriexu.github.io/"/>
-  <updated>2014-11-16T01:58:18-05:00</updated>
+  <updated>2014-11-16T10:56:07-05:00</updated>
   <id>http://carriexu.github.io/</id>
   <author>
     <name><![CDATA[Carrie Xu]]></name>
@@ -18,7 +18,7 @@
     <link href="http://carriexu.github.io/blog/2014/11/16/deploying-octopress-blog-to-github-pages/"/>
     <updated>2014-11-16T01:11:20-05:00</updated>
     <id>http://carriexu.github.io/blog/2014/11/16/deploying-octopress-blog-to-github-pages</id>
-    <content type="html"><![CDATA[<p>This blog is powered by <a href="http://octopress.org/">Octopress</a>. There was an issue I ran into while trying to deploy my blog to github pages, it was the following:</p>
+    <content type="html"><![CDATA[<p>This blog is powered by <a href="http://octopress.org/">Octopress</a>. There were a few issues I ran into while trying to deploy my blog to github pages, the first was the following:</p>
 
 <pre><code>## Pushing generated _deploy website
 To git@github.com:carriexu/carriexu.github.io.git
@@ -31,6 +31,12 @@ error: failed to push some refs to 'git@github.com:carriexu/carriexu.github.io.g
 <p>To resolve this issue, I had to make a little change in the <code>:push</code> task in the Rakefile. I changed this line <code>Bundler.with_clean_env { system "git pull" }</code> to <code>Bundler.with_clean_env { system "git pull origin #{deploy_branch}" }</code></p>
 
 <p>Once that is changed, I ran <code>rake deploy</code> again and it worked.</p>
+
+<p>The second issue appeared after I tried to add a new landing page and moved my blogs to <code>/blog</code>, by following <a href="http://octopress.org/docs/theme/template/">this tutorial</a>, I was able to add a new home tab and direct the initial landing to there, however, my newly added <code>/blog</code> page were no longer displaying the blog posts, instead it looked more like the blog archive page.</p>
+
+<p>After digging around for a bit, I found <a href="http://stackoverflow.com/questions/24363061/redirected-octopress-blog-on-github-pages-shows-only-archives-link-instead-of-th">this stackoverflow post</a>, which was exactly my issue. To resolve it, I went into _config.yml, and changed <code>paginate_path: "posts/:num"</code> to <code>paginate_path: "blog/posts/:num"</code></p>
+
+<p>This resolved the issue and my posts are once again displaying properly. Hurray!</p>
 ]]></content>
   </entry>
   
