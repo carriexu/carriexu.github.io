@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://carriexu.github.io/blog/2014/11/22/web-design-for-the-completely-clueless/</loc>
+    <lastmod>2014-11-22T23:51:27-05:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>http://carriexu.github.io/blog/2014/11/16/deploying-octopress-blog-to-github-pages/</loc>
     <lastmod>2014-11-16T01:11:20-05:00</lastmod>
     <priority>0.8</priority>
@@ -12,31 +17,31 @@
   </url>
   <url>
     <loc>http://carriexu.github.io/about/</loc>
-    <lastmod>2014-11-16T10:56:07-05:00</lastmod>
+    <lastmod>2014-11-23T00:13:07-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://carriexu.github.io/blog/</loc>
-    <lastmod>2014-11-16T10:56:07-05:00</lastmod>
+    <lastmod>2014-11-23T00:13:07-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://carriexu.github.io/</loc>
-    <lastmod>2014-11-16T10:56:07-05:00</lastmod>
+    <lastmod>2014-11-23T00:13:07-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>http://carriexu.github.io/blog/archives/</loc>
-    <lastmod>2014-11-16T10:56:07-05:00</lastmod>
+    <lastmod>2014-11-23T00:13:07-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://carriexu.github.io/about/</loc>
-    <lastmod>2014-11-16T10:56:07-05:00</lastmod>
+    <lastmod>2014-11-23T00:13:07-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

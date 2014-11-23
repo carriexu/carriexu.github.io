@@ -4,7 +4,7 @@
   <title><![CDATA[Carrie Xu]]></title>
   <link href="http://carriexu.github.io/atom.xml" rel="self"/>
   <link href="http://carriexu.github.io/"/>
-  <updated>2014-11-16T10:56:07-05:00</updated>
+  <updated>2014-11-23T00:13:07-05:00</updated>
   <id>http://carriexu.github.io/</id>
   <author>
     <name><![CDATA[Carrie Xu]]></name>
@@ -12,6 +12,60 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Web Design for the Completely Clueless]]></title>
+    <link href="http://carriexu.github.io/blog/2014/11/22/web-design-for-the-completely-clueless/"/>
+    <updated>2014-11-22T23:51:27-05:00</updated>
+    <id>http://carriexu.github.io/blog/2014/11/22/web-design-for-the-completely-clueless</id>
+    <content type="html"><![CDATA[<p><a href="http://larrybuch.com/index.html">Larry Buchanan</a> volunteered 3 hours of his time today and talked to us about design.</p>
+
+<p>The <strong>design process</strong> is a complete mystery to someone who hasn&rsquo;t studied design before, namely me. Larry highlighted some key design principles and walked us through his design process using an example. Thank you Larry.</p>
+
+<p>A few of my takeaways:</p>
+
+<ul>
+<li><p>Sketch first, code later. Thinking about design while coding is actually slower than if we sketched first and turn it into code later</p></li>
+<li><p>Color</p>
+
+<ul>
+<li>RGB is for web and CMYK is for print, when using design software such as Adobe Illustrator and Indesign, always remember to switch to RGB when we want to deploy to the web</li>
+<li>To start: use black, white, and one other color, dark gray works well to bring up the sophistication feel of the site as pure black tend to overwhelm</li>
+</ul>
+</li>
+<li><p>Typography</p>
+
+<ul>
+<li>Serif and Sans Serif, try one of each to bring out contrast</li>
+<li>Consistency builds street cred</li>
+</ul>
+</li>
+<li><p>Layout</p>
+
+<ul>
+<li>Make something dominant</li>
+<li>Use the Grid system like Skeleton to help make sites responsive</li>
+</ul>
+</li>
+</ul>
+
+
+<h5>Helpful sites to checkout:</h5>
+
+<p><a href="https://wireframe.cc/">wireframes</a></p>
+
+<p><a href="http://www.siteinspire.com/">beautiful sites to look at</a></p>
+
+<p><a href="http://getskeleton.com/">skeleton</a></p>
+
+<p><a href="http://flatuicolors.com/">flat ui colors</a>
+<a href="https://color.adobe.com/create/color-wheel/">color wheel</a></p>
+
+<p><a href="http://www.colourlovers.com/">more colors</a></p>
+
+<p><a href="https://news.layervault.com/">Design News</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Deploying Octopress Blog to Github Pages]]></title>
@@ -45,7 +99,7 @@ error: failed to push some refs to 'git@github.com:carriexu/carriexu.github.io.g
     <link href="http://carriexu.github.io/blog/2014/11/16/hello-world/"/>
     <updated>2014-11-16T00:15:43-05:00</updated>
     <id>http://carriexu.github.io/blog/2014/11/16/hello-world</id>
-    <content type="html"><![CDATA[<p><em>Hello and welcome, I am on my way to become a web developer, this is my journey.Thank you for reading.</em></p>
+    <content type="html"><![CDATA[<p><em>Hello and welcome, my name is Carrie. I am a junior full-stack web developer, this is my learning journey.Thank you for reading.</em></p>
 ]]></content>
   </entry>
   
